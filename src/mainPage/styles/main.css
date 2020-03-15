@@ -1,0 +1,74 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.waves-effect {
+    background-color: rgb(4, 93, 233);
+    background-image: linear-gradient(315deg, rgb(4, 93, 233) 0%, rgb(9, 198, 249) 74%);
+    z-index: 0;
+}
+
+.waves-part:first-child {
+    transform: scaleY(-1);
+}
+
+.waves-part {
+    display: block;
+    z-index: 0;
+    fill: white;
+}
+
+.site-title-svg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -60px;
+    z-index: 999;
+}
+.site-title-svg svg {
+    stroke: orange;
+    stroke-dasharray: 140;
+    stroke-dashoffset: 0;
+}
+
+.site-title-svg svg {
+    fill: none;
+    stroke-width: 0.7mm;
+    margin: 0px 7px;
+}
+
+.site-title-svg-background {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -60px;
+    z-index: 1;
+}
+
+.site-title-svg-background svg {
+    fill: none;
+    stroke-width: 0.7mm;
+    margin: 0px 7px;
+}
+
+.waves-effect canvas {
+    position: absolute;
+    top: 0px;
+}
+
+.site-title-svg path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    stroke: white;
+    animation: dash-animation 20s linear infinite;
+}
+
+.site-title-svg-background path {
+    stroke: rgb(255, 51, 153);
+}
+
+@keyframes dash-animation {
+    100%{
+        stroke-dashoffset: 1440;
+    }
+}
